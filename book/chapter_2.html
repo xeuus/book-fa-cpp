@@ -93,14 +93,6 @@
                     </div>
                 </div>
 
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
-                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                    });
-                </script>
 
                 <div id="content" class="content">
                     <main>
@@ -166,6 +158,18 @@ fn someFunction() {
         <nav id="sidebar" class="sidebar" aria-label="فهرست">
             <ol class="chapter"><li><a href="chapter_1.html">۱ فصل اول</a></li><li><a href="chapter_2.html" class="active">۲ فصل دوم</a></li><li><ol class="section"><li><a href="chapter_2_1.html">۲-۱ فصل سوم</a></li></ol></li></ol>
         </nav>
+
+
+
+
+        <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+        <script type="text/javascript">
+            document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+            document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+            Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+            });
+        </script>
 
 
         

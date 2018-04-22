@@ -370,7 +370,7 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
     display: none;
   }
   .sidebar-visible .nav-wrapper {
-    display: block;
+    display: none;
   }
 }
 .theme-popup {
