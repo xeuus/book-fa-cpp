@@ -18,7 +18,9 @@
         <link rel="shortcut icon" href="{{ favicon }}">
 
         <!-- Font Awesome -->
+        <link rel="stylesheet" href="_FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
@@ -115,14 +117,14 @@
 
 
                         {{#previous}}
-                            <a rel="prev" href="{{link}}" class="mobile-nav-chapters next" title="فصل قبل" aria-label="فصل قبل" aria-keyshortcuts="Right">
+                            <a rel="prev" href="{{link}}" class="mobile-nav-chapters previous" title="فصل قبل" aria-label="فصل قبل" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         {{/previous}}
 
 
                         {{#next}}
-                            <a rel="next" href="{{link}}" class="mobile-nav-chapters previous" title="فصل بعد" aria-label="فصل بعد" aria-keyshortcuts="Left">
+                            <a rel="next" href="{{link}}" class="mobile-nav-chapters next" title="فصل بعد" aria-label="فصل بعد" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         {{/next}}
@@ -134,15 +136,17 @@
 
             <nav class="nav-wide-wrapper">
 
+
+
                 {{#previous}}
-                    <a href="{{link}}" class="nav-chapters next" title="فصل قبل" aria-label="فصل قبل" aria-keyshortcuts="Right">
+                    <a href="{{link}}" class="nav-chapters previous" title="فصل بعد" aria-label="فصل بعد" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 {{/previous}}
 
 
                 {{#next}}
-                    <a href="{{link}}" class="nav-chapters previous" title="فصل بعد" aria-label="فصل بعد" aria-keyshortcuts="Left">
+                    <a href="{{link}}" class="nav-chapters next" title="فصل قبل" aria-label="فصل قبل" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 {{/next}}

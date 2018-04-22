@@ -316,6 +316,7 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
 }
 .nav-wrapper {
   margin-top: 50px;
+  width: 100%;
   display: none;
 }
 .mobile-nav-chapters {
@@ -325,15 +326,24 @@ html:not(.sidebar-visible) #menu-bar:not(:hover).folded > #menu-bar-sticky-conta
   width: 90px;
   border-radius: 5px;
 }
-.previous {
+
+.mobile-nav-chapters.previous{
+  float: right;
+}
+
+.mobile-nav-chapters.next{
   float: left;
 }
-.next {
-  float: right;
-  right: 15px;
+.previous {
+  right: 0;
 }
+.next {
+  left: 0;
+}
+
 .nav-wide-wrapper {
   direction: ltr;
+  width: 100vw;
 }
 
 @media only screen and (max-width: 1080px) {
