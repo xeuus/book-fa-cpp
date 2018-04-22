@@ -84,11 +84,6 @@
                             <button id="sidebar-toggle" class="icon-button" type="button" title="نمایش فهرست" aria-label="نمایش فهرست" aria-controls="sidebar">
                                 <i class="fa fa-bars"></i>
                             </button>
-                            {{#if search_enabled}}
-                            <button id="search-toggle" class="icon-button" type="button" title="جستجو در کتاب" aria-label="جستجو در کتاب" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            {{/if}}
                         </div>
 
                         <h1 class="menu-title">{{ book_title }}</h1> 
@@ -100,19 +95,6 @@
                         </div>
                     </div>
                 </div>
-
-                {{#if search_enabled}}
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="دنبال چیزی میگردی ؟" aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
-                {{/if}}
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
@@ -130,15 +112,18 @@
 
                     <nav class="nav-wrapper" >
                         <!-- Mobile navigation buttons -->
+
+
                         {{#previous}}
-                            <a rel="prev" href="{{link}}" class="mobile-nav-chapters previous" title="فصل قبل" aria-label="فصل قبل" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
+                            <a rel="prev" href="{{link}}" class="mobile-nav-chapters next" title="فصل قبل" aria-label="فصل قبل" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
                             </a>
                         {{/previous}}
 
+
                         {{#next}}
-                            <a rel="next" href="{{link}}" class="mobile-nav-chapters next" title="فصل بعد" aria-label="فصل بعد" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
+                            <a rel="next" href="{{link}}" class="mobile-nav-chapters previous" title="فصل بعد" aria-label="فصل بعد" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
                             </a>
                         {{/next}}
 
@@ -148,17 +133,21 @@
             </div>
 
             <nav class="nav-wide-wrapper">
+
                 {{#previous}}
-                    <a href="{{link}}" class="nav-chapters previous" title="فصل قبل" aria-label="فصل قبل" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
+                    <a href="{{link}}" class="nav-chapters next" title="فصل قبل" aria-label="فصل قبل" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
                     </a>
                 {{/previous}}
 
+
                 {{#next}}
-                    <a href="{{link}}" class="nav-chapters next" title="فصل بعد" aria-label="فصل بعد" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
+                    <a href="{{link}}" class="nav-chapters previous" title="فصل بعد" aria-label="فصل بعد" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
                     </a>
                 {{/next}}
+
+
             </nav>
 
         </div>
@@ -220,16 +209,7 @@
         <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
         <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
         {{/if}}
-
-        {{#if search_enabled}}
-        <script src="searchindex.js" type="text/javascript" charset="utf-8"></script>
-        {{/if}}
-        {{#if search_js}}
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        {{/if}}
-
+        
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="book.js" type="text/javascript" charset="utf-8"></script>

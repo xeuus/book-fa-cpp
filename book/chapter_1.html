@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chapter 1 - </title>
+        <title>۱ - فصل اول - کتاب من</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,14 +79,9 @@
                             <button id="sidebar-toggle" class="icon-button" type="button" title="نمایش فهرست" aria-label="نمایش فهرست" aria-controls="sidebar">
                                 <i class="fa fa-bars"></i>
                             </button>
-                            
-                            <button id="search-toggle" class="icon-button" type="button" title="جستجو در کتاب" aria-label="جستجو در کتاب" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            
                         </div>
 
-                        <h1 class="menu-title"></h1> 
+                        <h1 class="menu-title">کتاب من</h1> 
 
                         <div class="right-buttons">
                             <a href="print.html" title="چاپ" aria-label="چاپ">
@@ -95,19 +90,6 @@
                         </div>
                     </div>
                 </div>
-
-                
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="دنبال چیزی میگردی ؟" aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
-                
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
@@ -132,8 +114,15 @@
 
                     <nav class="nav-wrapper" >
                         <!-- Mobile navigation buttons -->
+
+
                         
 
+
+                        
+                            <a rel="next" href="chapter_2.html" class="mobile-nav-chapters previous" title="فصل بعد" aria-label="فصل بعد" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -142,16 +131,24 @@
             </div>
 
             <nav class="nav-wide-wrapper">
-                
 
                 
+
+
+                
+                    <a href="chapter_2.html" class="nav-chapters previous" title="فصل بعد" aria-label="فصل بعد" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+
             </nav>
 
         </div>
 
 
         <nav id="sidebar" class="sidebar" aria-label="فهرست">
-            <ol class="chapter"><li><a href="chapter_1.html" class="active"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
+            <ol class="chapter"><li><a href="chapter_1.html" class="active">۱ - فصل اول</a></li><li><a href="chapter_2.html">۲ - فصل دوم</a></li><li><ol class="section"><li><a href="chapter_2.html">۲.۱ - فصل سوم</a></li></ol></li></ol>
         </nav>
 
 
@@ -162,16 +159,13 @@
         
 
         
-
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
         
-        <script src="searchindex.js" type="text/javascript" charset="utf-8"></script>
         
-        
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        
-
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="book.js" type="text/javascript" charset="utf-8"></script>

@@ -2,5 +2,13 @@
 authors = ["Aryan Alikhani"]
 multilingual = false
 src = "src"
+title = "کتاب من"
 [output.html]
+no-section-label=true
 theme = "src/theme"
+
+[output.html.playpen]
+editable = true
+
+[output.html.search]
+enable = false
