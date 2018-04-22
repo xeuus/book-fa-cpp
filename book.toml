@@ -1,0 +1,6 @@
+[book]
+authors = ["Aryan Alikhani"]
+multilingual = false
+src = "src"
+[output.html]
+theme = "src/theme"
